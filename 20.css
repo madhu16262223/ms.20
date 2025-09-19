@@ -1,0 +1,168 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+/* Background with overlay */
+.main {
+  min-height: 100vh;
+  background: url("background_image.jpeg") no-repeat center center/cover;
+  position: relative;
+  color: white;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+  color: #FFD700; /* Gold accent */
+}
+
+.auth-buttons .auth-btn {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #1A56DB; /* Primary Blue */
+  color: white;
+  transition: 0.3s;
+}
+
+.auth-buttons .auth-btn:hover {
+  background: #EA5838; /* Orange hover */
+}
+
+/* Hero Content */
+.content {
+  text-align: center;
+  margin-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content h1 span {
+  color: #FFD700;
+}
+
+.par {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #FFD700;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #0F172A;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: none;
+}
+
+.modal-content .btnn {
+  width: 100%;
+  padding: 10px;
+  background: #1A56DB;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content .btnn:hover {
+  background: #EA5838;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.error-text {
+  color: #EA5838;
+  font-size: 14px;
+}
